@@ -22,11 +22,11 @@ add_subdirectory(interpreter)
 include_directories(interpreter)
 aux_source_directory(compiler COMPILER_SRC)
 aux_source_directory(interpreter INTERPRETER_SRC)
-add_executable(qt_gui WIN32
+add_executable(CX_Compiler WIN32
         ${QRC_FILES}  main.cpp MainWindow.cpp ${COMPILER_SRC} ${INTERPRETER_SRC} MainWindow.h MyTextEdit.cpp MyTextEdit.h TextItem.h StackDialog.cpp StackDialog.h)
 
 
-target_link_libraries(qt_gui
+target_link_libraries(CX_Compiler
         Qt6::Core
         Qt6::Gui
         Qt6::Widgets
